@@ -1,23 +1,23 @@
 #
 
-class LinkedList
-	attr_accessor :list 
+# ['barbra','Lilly','Adam','Cheryl','Karl']
 
-	def initialize
-     @list = []
-    end 
+class LinkedList
+	
 end
 
 class Node
 	attr_accessor :next_node, :value
 	
-	def initialize
-		@next_node = nil
-		@value = nil 
+	def initialize(value = nil, next_node = nil)
+		@value = value
+		@next_node = next_node
 	end
 end	
 
 #runner - - - - -
+
+testing_linked_list = LinkedList.new
 
 
 
