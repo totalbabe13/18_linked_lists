@@ -3,8 +3,7 @@
 # ['barbra','Lilly','Adam','Cheryl','Karl']
 
 class LinkedList
-    attr_accessor :list, 
-
+  attr_accessor :list
 
 	def initialize
 		@list = []
@@ -34,11 +33,17 @@ class LinkedList
     	list.length
     end
 
+    def head
+    	list[0]
+    end	
 
+    def tail
+    	list[list.length-1]
+    end
 end
 
 class Node
-	attr_accessor :next_node, :value
+  attr_accessor :next_node, :value
 	
 	def initialize(value = nil, next_node = nil)
 		@value = value
@@ -46,20 +51,21 @@ class Node
 	end
 end	
 
+
+
+# [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> nil
 #runner - - - - -
-p 'lilililil'
 test_link = LinkedList.new
 
 test_link.append('abcdefg')
-# test_link.append('parabola')
-# test_link.append('this is the END!!!')
+test_link.append('parabola')
+test_link.append('this is the END!!!')
+test_link.prepend('IN THE BEGINNING there was coffee')
+test_link.list.size
+test_link.head
+p test_link.tail
 
-# test_link.prepend('IN THE BEGINNING there was coffee')
-# p test_link.list.size
-#test_link
-# [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> nil
 
 
-#<LinkedList:
-  # @head= <Node@value="head", @next_node=nil>, 
-   #@tail=#<Node:@value="xxx", @next_node=nil>>
+
+
