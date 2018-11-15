@@ -40,6 +40,24 @@ class LinkedList
     def tail
     	list[list.length-1]
     end
+
+    def at(index)
+    	index -= 1
+      if list[index] == nil
+        'there is no index number #{index}'
+      else 
+        list[index]
+      end    
+    end	
+
+    def pop
+    	if list.length == 2
+    		puts 'this list is empty'
+    	else
+    	  list.pop
+    	  list[(list.length) -1].next_node = nil
+    	end 	
+    end	
 end
 
 class Node
@@ -63,7 +81,10 @@ test_link.append('this is the END!!!')
 test_link.prepend('IN THE BEGINNING there was coffee')
 test_link.list.size
 test_link.head
-p test_link.tail
+test_link.tail
+test_link.at(3)
+test_link.pop
+p test_link.list
 
 
 
