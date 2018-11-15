@@ -61,10 +61,13 @@ class LinkedList
 	end
 
 	def find(data)
-	  a.index(data)
+	  data_set.index(data)
 	end
 	
 	def to_s
+	  # data_set.each {|node| puts node.to_s}
+	  #The format should be: ( data ) -> ( data ) -> ( data ) -> nil
+	  puts " ( #{data_set.join(" ) -> ()} ) "
 	end	
 
 end
@@ -87,13 +90,15 @@ test_list.prepend('BB')
 # p test_list.head
 # puts ' - - - -'
 # p test_list.tail
-p test_list.data_set
-puts ' - - - -'
-p test_list.at(1)
-puts ' - - - -'
-test_list.pop
-p test_list.data_set
 # p test_list.data_set
+# puts ' - - - -'
+# p test_list.at(1)
+# puts ' - - - -'
+# test_list.pop
+# p test_list.contains?('XX')
+# p test_list.find('BB')
+# p test_list.data_set
+  test_list.to_s
 
 
 
